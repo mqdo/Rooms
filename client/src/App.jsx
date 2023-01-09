@@ -3,6 +3,7 @@ import { io } from 'socket.io-client';
 import { Routes, Route } from 'react-router-dom';
 
 import { ChatAll, SnakeLadder, TicTacToe, Home } from './components';
+import withHeader from './hoc/withHeader';
 
 // const socket = io('http://localhost:3000');
 
@@ -27,7 +28,6 @@ const App = () => {
 
   return (
     <div>
-      <h1 className=' font-serif text-7xl'>Hello</h1>
       <Routes>
         <Route
           exact path='/'
@@ -50,4 +50,4 @@ const App = () => {
   )
 }
 
-export default App
+export default withHeader(App)
