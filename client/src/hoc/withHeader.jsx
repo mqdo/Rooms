@@ -34,7 +34,7 @@ const withHeader = (WrappedComponent) => {
     }
 
     return (
-      <div className="h-[100vh] relative overflow-hidden" onClick={handleClickOutside}>
+      <div className="h-[100vh] relative overflow-x-hidden" onClick={handleClickOutside}>
         <Header handleToggle={handleToggle} />
         {toggleNav
           ? <Sidebar navRef={navRef} handleToggle={handleToggle} />

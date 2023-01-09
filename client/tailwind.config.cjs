@@ -10,14 +10,14 @@ module.exports = {
         },
       },
       animation: {
-        'slide-in': 'slide 0.5s ease-in'
-      }
+        'slide-in': 'slide 0.5s ease-in',
+      },
     },
     colors: {
       transparent: 'transparent',
       primary: {
         200: '#E5BC8D',
-        400: '#E5BC8D',
+        400: '#EB922A',
         700: '#6D3C02',
       },
       secondary: {
