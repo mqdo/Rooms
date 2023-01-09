@@ -2,7 +2,17 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(400px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'slide-in': 'slide 0.5s ease-in'
+      }
+    },
     colors: {
       transparent: 'transparent',
       primary: {
