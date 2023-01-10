@@ -7,7 +7,7 @@ import ticTacToe from '../../assets/tic-tac-toe.jpg';
 
 const Home = () => {
   return (
-    <div className='px-4 py-8'>
+    <div className='px-4 py-8 min-h-screen'>
       <h1 className="font-serif text-5xl text-primary-700 text-center">Let's Join A Room!</h1>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 place-items-center">
         <RoomCard name="Chat All" link="/chat/all" image={chatAll} />

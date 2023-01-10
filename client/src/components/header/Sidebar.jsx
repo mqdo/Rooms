@@ -5,7 +5,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const Sidebar = ({ navRef, handleToggle }) => {
   return (
-    <div className="h-[100vh] w-[400px] absolute top-0 right-0 bg-primary-400 animate-slide-in shadow-2xl" ref={navRef}>
+    <div className="h-[100vh] w-[400px] fixed top-0 right-0 z-50 bg-primary-400 animate-slide-in shadow-2xl" ref={navRef}>
       <button className="absolute right-4 top-4" onClick={handleToggle} >
         <AiOutlineCloseCircle fill="#6D3C02" size={28} />
       </button>

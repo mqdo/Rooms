@@ -12,10 +12,10 @@ const withHeader = (WrappedComponent) => {
 
     useEffect(() => {
       window.addEventListener('resize', () => setToggleNav(false));
-      document.addEventListener('scroll', handleClickOutside);
+      document.addEventListener('scroll', () => setToggleNav(false));
       return () => {
         window.removeEventListener('resize', () => setToggleNav(false));
-        document.addEventListener('scroll', handleClickOutside);
+        document.removeEventListener('scroll', () => setToggleNav(false));
       }
     }, [])
 
@@ -34,7 +34,7 @@ const withHeader = (WrappedComponent) => {
     }
 
     return (
-      <div className="h-[100vh] relative overflow-x-hidden" onClick={handleClickOutside}>
+      <div className="relative overflow-x-hidden" onClick={handleClickOutside}>
         <Header handleToggle={handleToggle} />
         {toggleNav
           ? <Sidebar navRef={navRef} handleToggle={handleToggle} />
