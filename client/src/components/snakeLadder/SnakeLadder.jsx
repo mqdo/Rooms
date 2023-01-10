@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { withAccount } from '../../hoc';
 
 const SnakeLadder = () => {
   return (
@@ -6,4 +8,4 @@ const SnakeLadder = () => {
   )
 }
 
-export default SnakeLadder
+export default withAccount(SnakeLadder);

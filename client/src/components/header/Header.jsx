@@ -6,7 +6,7 @@ import logoFullDark from '../../assets/Logo-full-dark.svg';
 
 const Header = ({ handleToggle }) => {
   return (
-    <div className="w-full bg-primary-400 relative">
+    <div className="w-full bg-primary-400 fixed top-0">
       <div className="md:hidden mx-auto h-16 flex justify-between items-center p-4">
         <NavLink to="/">
           <img src={logoFullDark} alt="logo" />
@@ -31,6 +31,9 @@ const Header = ({ handleToggle }) => {
           </NavLink>
           <NavLink to="/game/tic-tac-toe" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
             Tic Tac Toe
+          </NavLink>
+          <NavLink to="/account" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
+            Account
           </NavLink>
         </div>
       </div>

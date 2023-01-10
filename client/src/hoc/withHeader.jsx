@@ -40,7 +40,9 @@ const withHeader = (WrappedComponent) => {
           ? <Sidebar navRef={navRef} handleToggle={handleToggle} />
           : null
         }
-        <WrappedComponent {...props} />
+        <div className="mt-16">
+          <WrappedComponent {...props} />
+        </div>
       </div>
     );
   }

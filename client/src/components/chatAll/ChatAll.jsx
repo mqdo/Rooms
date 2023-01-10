@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { withAccount } from '../../hoc';
 
 const ChatAll = () => {
   return (
@@ -6,4 +8,4 @@ const ChatAll = () => {
   )
 }
 
-export default ChatAll
+export default withAccount(ChatAll)

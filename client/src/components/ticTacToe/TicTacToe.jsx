@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { withAccount } from '../../hoc';
 
 const TicTacToe = () => {
   return (
@@ -6,4 +8,4 @@ const TicTacToe = () => {
   )
 }
 
-export default TicTacToe
+export default withAccount(TicTacToe);
