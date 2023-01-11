@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withAccount } from '../../hoc';
+import { withAccount } from '../../../hoc';
 
 const SnakeLadder = () => {
   return (

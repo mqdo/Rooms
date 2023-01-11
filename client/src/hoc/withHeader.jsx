@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { Header, Sidebar } from '../components/header';
+import { Header, Sidebar } from '../components';
 
 const withHeader = (WrappedComponent) => {
   return function (props) {

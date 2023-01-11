@@ -5,8 +5,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { RiHomeFill } from 'react-icons/ri';
 import { RiAccountCircleFill } from 'react-icons/ri';
 import { BsChatRightFill } from 'react-icons/bs';
-import { GiSnake } from 'react-icons/gi';
-import { GiTicTacToe } from 'react-icons/gi';
+import { RiGamepadFill } from 'react-icons/ri';
 
 const Sidebar = ({ navRef, handleToggle }) => {
   return (
@@ -15,24 +14,20 @@ const Sidebar = ({ navRef, handleToggle }) => {
         <AiOutlineCloseCircle fill="#6D3C02" size={28} />
       </button>
       <div className="mx-auto flex flex-col h-[400px] justify-between items-center pt-16">
-        <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-2 items-center`}>
+        <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-4 items-center`}>
           <RiHomeFill size={24} />
           Home
         </NavLink>
-        <NavLink to="/chat/all" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-2 items-center`}>
-          <BsChatRightFill size={22} />
-          Chat All
+        <NavLink to="/chat" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-4 items-center`}>
+          <BsChatRightFill size={20} />
+          Chat
         </NavLink>
-        <NavLink to="/game/snake-ladder" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-2 items-center`}>
-          <GiSnake size={24} />
-          Snakes & Ladders
+        <NavLink to="/game" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-4 items-center`}>
+          <RiGamepadFill size={26} />
+          Game
         </NavLink>
-        <NavLink to="/game/tic-tac-toe" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-2 items-center`}>
-          <GiTicTacToe size={24} />
-          Tic Tac Toe
-        </NavLink>
-        <NavLink to="/account" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-2 items-center`}>
-          <RiAccountCircleFill size={24} />
+        <NavLink to="/account" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50 flex gap-4 items-center`}>
+          <RiAccountCircleFill size={26} />
           Account
         </NavLink>
       </div>

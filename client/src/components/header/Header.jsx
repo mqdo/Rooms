@@ -19,18 +19,15 @@ const Header = ({ handleToggle }) => {
         <NavLink to="/">
           <img src={logoFullDark} alt="logo" />
         </NavLink>
-        <div className="min-w-[70%] flex justify-between">
+        <div className="min-w-[50%] flex justify-between">
           <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
             Home
           </NavLink>
-          <NavLink to="/chat/all" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
-            Chat All
+          <NavLink to="/chat" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
+            Chat
           </NavLink>
-          <NavLink to="/game/snake-ladder" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
-            Snakes & Ladders
-          </NavLink>
-          <NavLink to="/game/tic-tac-toe" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
-            Tic Tac Toe
+          <NavLink to="/game" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
+            Game
           </NavLink>
           <NavLink to="/account" className={({ isActive }) => `${isActive ? 'text-primary-700' : 'text-gray-600'} font-serif text-xl hover:opacity-50`}>
             Account
