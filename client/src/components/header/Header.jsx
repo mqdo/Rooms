@@ -6,7 +6,7 @@ import logoFullDark from '../../assets/Logo-full-dark.svg';
 
 const Header = ({ handleToggle }) => {
   return (
-    <div className="w-full bg-primary-400 fixed top-0">
+    <div className="w-full bg-primary-400 fixed top-0  z-50">
       <div className="md:hidden mx-auto h-16 flex justify-between items-center p-4">
         <NavLink to="/">
           <img src={logoFullDark} alt="logo" />

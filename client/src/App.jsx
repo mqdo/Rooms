@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { io } from 'socket.io-client';
 import { Routes, Route } from 'react-router-dom';
 
-import { Home, Chat, Game, Stories, Account, ChatAll, SnakeLadder, TicTacToe, Story } from './pages';
+import { Home, Chat, Game, Stories, Account, ChatLayout, SnakeLadder, TicTacToe, Story } from './pages';
 import { withHeader } from './hoc';
 
 // const socket = io('http://localhost:3000');
@@ -38,7 +38,7 @@ const App = () => {
           element={<Account />}
         />
         <Route path='/chat' element={<Chat />} />
-        <Route path='/chat/all' element={<ChatAll />} />
+        <Route path='/chat/:name' element={<ChatLayout />} />
         <Route path='/game' element={<Game />} />
         <Route path='/game/snake-ladder' element={<SnakeLadder />} />
         <Route path='/game/tic-tac-toe' element={<TicTacToe />} />
