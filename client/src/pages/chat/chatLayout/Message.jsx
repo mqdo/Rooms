@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
-import { RiAccountCircleFill } from 'react-icons/ri';
 import placeholder from '../../../assets/avatar-placeholder.png';
 
 const Message = ({ message, socket, socketId }) => {

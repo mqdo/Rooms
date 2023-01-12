@@ -8,9 +8,18 @@ module.exports = {
           '0%': { transform: 'translateX(400px)' },
           '100%': { transform: 'translateX(0)' },
         },
+        roll: {
+          '0%': {
+            transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)',
+          },
+          '100%': {
+            transform: 'rotateX(360deg) rotateY(360deg) rotateZ(360deg)',
+          },
+        },
       },
       animation: {
         'slide-in': 'slide 0.5s ease-in',
+        'rolling': 'roll 1s ease-in-out'
       },
     },
     colors: {
