@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
 
+import 'react-tooltip/dist/react-tooltip.css';
 import { withAccount } from '../../../hoc';
 import Message from './Message';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -10,27 +12,27 @@ import { IoIosSend } from 'react-icons/io';
 
 const msg = [
   {
-    sender: 'user1',
+    sender: { name: 'user1' },
     content: 'hello world',
     time: Date.now()
   },
   {
-    sender: 'user2',
+    sender: { name: 'user2' },
     content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos impedit nesciunt deserunt at voluptates maxime consequatur consectetur laborum laudantium molestiae libero repellat ea eaque, optio, sed ducimus perferendis magnam.',
     time: Date.now()
   },
   {
-    sender: 'user3',
+    sender: { name: 'user3' },
     content: 'hello world',
     time: Date.now()
   },
   {
-    sender: 'user4',
+    sender: { name: 'user4' },
     content: 'hello world',
     time: Date.now()
   },
   {
-    sender: 'user5',
+    sender: { name: 'user5' },
     content: 'hello world',
     time: Date.now()
   },
@@ -77,13 +79,14 @@ const ChatLayout = ({ account }) => {
           <IoIosArrowBack size={32} fill="#6D3C02" />
         </Link>
         <h1 className="font-serif text-5xl text-primary-700 text-center">{title}</h1>
-        {/* <button className='absolute top-[50%] -translate-y-[50%] right-0'>
+        <div id='show-online' data-tooltip-content={`${69} user(s) online`} data-tooltip-place='left' data-tooltip-variant='warning' className='absolute top-[50%] -translate-y-[50%] right-0'>
           <AiOutlineInfoCircle size={24} fill="#6D3C02" />
-        </button> */}
+        </div>
+        <Tooltip anchorId='show-online' />
       </div>
       <div className='relative max-w-3xl mx-auto'>
         <div id='chat-body' className='w-full h-[70vh] my-4 mx-auto overflow-y-scroll'>
-          {messages.map((ms, index) => <Message key={index} message={ms} socket={{ id: '123' }} socketId={'abc'} />)}
+          {messages.map((ms, index) => <Message key={index} message={ms} socket={{ id: 'abc' }} socketId={'abc'} />)}
         </div>
         <button className='absolute right-4 -bottom-4 text-gray-500 hover:text-primary-400' onClick={scrollToBottom}>Read Latest</button>
       </div>
