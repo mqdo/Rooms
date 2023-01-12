@@ -73,7 +73,7 @@ const ChatLayout = ({ account }) => {
   }
 
   return (
-    <div className='p-4 mx-auto max-w-5xl z-0 relative'>
+    <div className='p-4 mx-auto max-w-5xl z-0 relative flex flex-col justify-between'>
       <div className='relative'>
         <Link to='/chat' className='absolute top-[50%] -translate-y-[50%]'>
           <IoIosArrowBack size={32} fill="#6D3C02" />
@@ -85,12 +85,12 @@ const ChatLayout = ({ account }) => {
         <Tooltip anchorId='show-online' />
       </div>
       <div className='relative max-w-3xl mx-auto'>
-        <div id='chat-body' className='w-full h-[70vh] my-4 mx-auto overflow-y-scroll'>
+        <div id='chat-body' className='w-full h-[69vh] my-4 mx-auto overflow-y-scroll'>
           {messages.map((ms, index) => <Message key={index} message={ms} socket={{ id: 'abc' }} socketId={'abc'} />)}
         </div>
-        <button className='absolute right-4 -bottom-4 text-gray-500 hover:text-primary-400' onClick={scrollToBottom}>Read Latest</button>
+        <button className='absolute right-4 -bottom-2 text-gray-500 hover:text-primary-400' onClick={scrollToBottom}>Read Latest</button>
       </div>
-      <div className='py-2 px-4 mx-auto w-full md:max-w-xl h-[7vh] bg-primary-400 flex justify-between items-center gap-1 relative rounded-md'>
+      <div className='py-2 px-4 mx-auto mt-2 w-full md:max-w-xl h-[7vh] bg-primary-400 flex justify-between items-center gap-1 relative rounded-md'>
         <button className='absolute left-6'>
           <BsFillEmojiLaughingFill size={18} fill="#6D3C02" />
         </button>
